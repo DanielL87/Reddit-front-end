@@ -1,0 +1,194 @@
+#body-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#navbar {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc; /* Add a border along the bottom */
+  padding-bottom: 5px; /* Add some spacing between the content and the border */
+}
+
+.header {
+  margin: 10px;
+}
+
+#navbar-content {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10%;
+  margin-right: 10%;
+  align-items: center;
+}
+
+/* Style the links in the navbar */
+#navbar a {
+  text-decoration: none;
+  color: #333;
+  margin-right: 15px; /* Add spacing between links */
+}
+
+/* Add hover effect to the links */
+#navbar a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+/* Style the search bar (you can adjust these styles to your liking) */
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 15px;
+}
+
+.search-bar input[type="text"] {
+  border: none;
+  padding: 5px;
+  width: 150px;
+}
+
+.search-bar input[type="text"]:focus {
+  outline: none; /* Remove the default focus outline */
+  /* Add any additional styling you want when the input is focused */
+}
+
+.search-bar button {
+  border: none;
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #0056b3;
+}
+
+#subreddit-container {
+  flex: 1; /* Expand to fill available space */
+  display: flex;
+  flex-direction: column; /* Arrange subreddits vertically */
+}
+
+.individual-post {
+  display: flex;
+  gap: 15px;
+  border: 1px solid grey;
+  padding: 10px;
+  margin: 10px;
+  width: 80%;
+  box-sizing: border-box;
+  border-radius: 10px; /* Rounded edges */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Shadow */
+  background-color: #f5f5f5; /* Background color */
+  transition: transform 0.2s; /* Add a smooth hover effect */
+}
+
+.votes-container {
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.vote-arrow {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.vote-arrow.upvoted {
+  color: orangered;
+}
+
+.vote-arrow.downvoted {
+  color: orangered;
+}
+
+.individual-post:hover {
+  transform: scale(1.02); /* Scale up on hover */
+}
+
+.individual-subreddit {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid grey;
+  padding: 10px;
+  margin: 10px;
+  width: 80%;
+  box-sizing: border-box;
+  margin-right: 10px;
+  border-radius: 10px; /* Rounded edges */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Shadow */
+  background-color: #f5f5f5; /* Background color */
+  transition: transform 0.2s; /* Add a smooth hover effect */
+}
+
+.individual-subreddit:hover {
+  transform: scale(1.02); /* Scale up on hover */
+}
+
+/* Optional: To control spacing between posts */
+.post-container {
+  flex: 2; /* Expand to fill available space */
+  display: flex;
+  flex-direction: column; /* Arrange posts vertically */
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  width: 25%;
+  height: 25%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#sign-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  height: 100%; /* Make the container take the full height of its parent */
+
+  border-radius: 5px;
+}
+
+#sign-up form {
+  display: flex;
+  flex-direction: column; /* Arrange form elements in a column */
+  align-items: center; /* Center form elements horizontally within the form */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  background-color: grey;
+}
+
+#sign-up input[type="text"],
+#sign-up input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#sign-up button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#sign-up button:hover {
+  background-color: #0056b3;
+}
