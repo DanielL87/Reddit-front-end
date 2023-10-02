@@ -30,19 +30,20 @@ export default function Home() {
 
       <div className="post-container">
         <div className="header">
-          {" "}
           <div>All Posts</div>
-          <Link to={"/createpost"}>Create New Post!</Link>
+          {user.id && <Link to={"/createpost"}>Create New Post!</Link>}
         </div>
         {posts.map((post) => {
           return (
-            <Posts
-              key={post.id}
-              post={post}
-              token={token}
-              fetchPosts={fetchPosts}
-              user={user}
-            />
+            !post.parentId && (
+              <Posts
+                key={post.id}
+                post={post}
+                token={token}
+                fetchPosts={fetchPosts}
+                user={user}
+              />
+            )
           );
         })}
       </div>

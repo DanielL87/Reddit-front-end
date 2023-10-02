@@ -32,7 +32,7 @@ export default function CreatePost() {
       }),
     });
     const info = await res.json();
-    console.log(info);
+
     fetchPosts();
     navigate("/");
   }
@@ -56,7 +56,7 @@ export default function CreatePost() {
           onChange={(e) => setTitle(e.target.value)}
           value={title}
         />
-        <input
+        <textarea
           type="text"
           placeholder="Text.."
           onChange={(e) => setText(e.target.value)}

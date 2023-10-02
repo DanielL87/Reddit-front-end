@@ -75,6 +75,7 @@
 
 .individual-post {
   display: flex;
+  flex-direction: column;
   gap: 15px;
   border: 1px solid grey;
   padding: 10px;
@@ -191,4 +192,23 @@
 
 #sign-up button:hover {
   background-color: #0056b3;
+}
+
+.edit-post-content {
+  display: flex;
+  flex-direction: column;
+}
+.button-container {
+  display: flex;
+  gap: 5px;
+}
+
+.change-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.post-header {
+  display: flex;
+  gap: 10px;
 }

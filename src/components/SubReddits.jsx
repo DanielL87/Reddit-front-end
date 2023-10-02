@@ -23,6 +23,8 @@ export default function SubReddits(props) {
   return (
     <div className="individual-subreddit">
       <Link to={`/subreddits/${subreddit.name}`}>{subreddit.name}</Link>
+      <div>Created by:{subreddit.user.username}</div>
+      <div>Total Posts:{subreddit.posts.length}</div>
       {canDelete && <button onClick={deleteSubreddit}>Delete</button>}
     </div>
   );

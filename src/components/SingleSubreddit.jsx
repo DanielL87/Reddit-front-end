@@ -1,30 +1,22 @@
 import { Link, useOutletContext, useParams } from "react-router-dom";
 import Posts from "./Posts";
+import CreatePost from "./CreatePost";
 
 export default function SingleSubreddit() {
   const { subredditName } = useParams();
-  const { posts, fetchPosts, token, user, setSelectedSubreddit, subreddits } =
-    useOutletContext();
+  const { posts, fetchPosts, token, user } = useOutletContext();
 
   const filteredPosts = posts.filter(
     (post) => post.subreddit.name === subredditName
   );
 
-  // async function handleSelectedSubreddit(e) {
-  //   e.preventDefault();
-  //   const selectedSubreddit = subreddits.filter(
-  //     (subreddit) => subreddit.name === subredditName
-  //   );
-  //   console.log(selectedSubreddit);
-  // }
-
   return (
     <div className="post-container">
-      {/* <Link to={"/createpost"}>
-        <div onClick={handleSelectedSubreddit}>Post to R/{subredditName}</div>
-      </Link> */}
       {filteredPosts.length === 0 ? (
-        <p>There is nothing to see here. Be the First to add post!</p>
+        <div>
+          <p>There is nothing to see here. Be the First to add post!</p>
+          {user.id && <Link to={"/createpost"}>Create New Post!</Link>}
+        </div>
       ) : (
         filteredPosts.map((post) => (
           <Posts

@@ -14,6 +14,7 @@ function App() {
     const res = await fetch(`${API}/posts`);
     const info = await res.json();
     setPosts(info.posts);
+    console.log("fetching Posts");
   }
 
   async function fetchSubreddits() {
